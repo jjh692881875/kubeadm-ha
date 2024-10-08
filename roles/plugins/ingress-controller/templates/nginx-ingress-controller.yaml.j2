@@ -455,6 +455,8 @@ spec:
         - --validating-webhook-certificate=/usr/local/certificates/cert
         - --validating-webhook-key=/usr/local/certificates/key
         - --enable-metrics=false
+        - --http-port=8880
+        - --https-port=4443
         env:
         - name: POD_NAME
           valueFrom:
