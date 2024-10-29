@@ -32,7 +32,7 @@
 # # docker-ce源 (CentOS可使用：https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/$releasever/$basearch/stable )
 # docker_yum_repo: https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/{{ ansible_distribution_major_version }}/$basearch/stable
 # # kubernetes源
-# kubernetes_yum_repo:  https://mirrors.tuna.tsinghua.edu.cn/kubernetes/core:/stable:/v{{ kube_version.split('.')[0:2] | join('.') }}/rpm/
+# kubernetes_yum_repo:  https://mirrors.aliyun.com/kubernetes-new/core/stable/v{{ kube_version.split('.')[0:2] | join('.') }}/rpm/
 
 # # Debian apt源仓库
 # # 基础软件源
@@ -40,7 +40,7 @@
 # # docker-ce源
 # docker_apt_repo: "deb [arch={{ host_architecture }}] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/{{ host_distribution | lower }} {{ host_distribution_release }} stable"
 # # kubernetes源
-# kubernetes_apt_repo: deb https://mirrors.tuna.tsinghua.edu.cn/kubernetes/core:/stable:/v{{ kube_version.split('.')[0:2] | join('.') }}/deb/ /
+# kubernetes_apt_repo: deb https://mirrors.aliyun.com/kubernetes-new/core/stable/v{{ kube_version.split('.')[0:2] | join('.') }}/deb/ /
 
 # # 自定义hosts记录
 # # 举例：
@@ -194,7 +194,7 @@
 # # Etcd根证书过期时间（天）
 # etcd_ca_certs_expired: 36500
 # # Etcd使用的镜像
-# etcd_image: "{{ kube_image_repository }}/etcd:3.5.12-0"
+# etcd_image: "{{ kube_image_repository }}/etcd:3.5.15-0"
 # # Etcd 数据根目录
 # etcd_data_dir: "/var/lib/etcd"
 # # Etcd 每日备份时间，默认3，即凌晨3点，取值范围0-23
@@ -224,7 +224,7 @@
 # pod_infra_container_image: "{{ kube_image_repository }}/pause:3.9"
 
 # # kubernetes版本
-# kube_version: 1.30.2
+# kube_version: 1.30.5
 # kube_cni_version: 1.4.0
 
 # # 集群内部dns域名
@@ -361,22 +361,22 @@
 # # calico mtu
 # calico_veth_mtu: 0
 # # calico 相关镜像
-# calico_typha_image: "{{ kube_image_repository }}/calico_typha:v3.28.0"
-# calico_cni_image: "{{ kube_image_repository }}/calico_cni:v3.28.0"
-# calico_node_image: "{{ kube_image_repository }}/calico_node:v3.28.0"
-# calico_kube_controllers_image: "{{ kube_image_repository }}/calico_kube-controllers:v3.28.0"
+# calico_typha_image: "{{ kube_image_repository }}/calico_typha:v3.28.2"
+# calico_cni_image: "{{ kube_image_repository }}/calico_cni:v3.28.2"
+# calico_node_image: "{{ kube_image_repository }}/calico_node:v3.28.2"
+# calico_kube_controllers_image: "{{ kube_image_repository }}/calico_kube-controllers:v3.28.2"
 # # 设置 Felix 日志级别(debug, info, warning, error)
 # calico_felix_log_level: "warning"
 # # calicoctl image 地址
-# calicoctl_image: "{{ kube_image_repository }}/calico_ctl:v3.28.0"
+# calicoctl_image: "{{ kube_image_repository }}/calico_ctl:v3.28.2"
 
 # # 设置 flannel 后端
 # # flannel_backend: "host-gw"
 # flannel_backend: "vxlan"
 # flannel_enable_nftables: false
 # # flannel 镜像地址
-# flannel_image: "{{ kube_image_repository }}/flannel_flannel:v0.25.2"
-# flannel_cni_plugin_image: "{{ kube_image_repository }}/flannel_flannel-cni-plugin:v1.4.1-flannel1"
+# flannel_image: "{{ kube_image_repository }}/flannel_flannel:v0.25.7"
+# flannel_cni_plugin_image: "{{ kube_image_repository }}/flannel_flannel-cni-plugin:v1.5.1-flannel2"
 
 # # ------------------------ #
 # # ingress-controller 相关参数配置
@@ -389,8 +389,8 @@
 # ingress_controller_tpye: nginx
 
 # # nginx-ingress-controller 镜像地址
-# nginx_ingress_image: "{{ kube_image_repository }}/ingress-nginx_controller:v1.10.1"
-# nginx_ingress_webhook_certgen_image: "{{ kube_image_repository }}/ingress-nginx_kube-webhook-certgen:v1.4.1"
+# nginx_ingress_image: "{{ kube_image_repository }}/ingress-nginx_controller:v1.11.3"
+# nginx_ingress_webhook_certgen_image: "{{ kube_image_repository }}/ingress-nginx_kube-webhook-certgen:v1.4.4"
 
 # # traefik默认证书过期时间（天）
 # traefik_certs_expired: 3650
@@ -419,7 +419,7 @@
 # metrics_server_enabled: true
 
 # # metrics-server image地址
-# metrics_server_image: "{{ kube_image_repository }}/metrics-server_metrics-server:v0.7.1"
+# metrics_server_image: "{{ kube_image_repository }}/metrics-server_metrics-server:v0.7.2"
 
 # # ------------------------ #
 # # cert-manager 相关配置
