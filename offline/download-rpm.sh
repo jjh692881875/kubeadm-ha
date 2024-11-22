@@ -61,9 +61,9 @@ packages=(
     docker-ce-20.10.24
     docker-ce-cli-20.10.24
     containerd.io-1.6.20
-    kubeadm-1.30.5
-    kubectl-1.30.5
-    kubelet-1.30.5
+    kubeadm-1.30.7
+    kubectl-1.30.7
+    kubelet-1.30.7
     kubernetes-cni-1.4.0
 )
 
