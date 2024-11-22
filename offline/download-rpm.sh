@@ -60,7 +60,7 @@ packages=(
     iproute
     docker-ce-20.10.24
     docker-ce-cli-20.10.24
-    containerd.io-1.6.33
+    containerd.io-1.7.23
     kubeadm-1.30.7
     kubectl-1.30.7
     kubelet-1.30.7

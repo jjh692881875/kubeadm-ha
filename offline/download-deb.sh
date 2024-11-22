@@ -49,7 +49,7 @@ set -eux;
   apt-get -d install -y \
     docker-ce=$VERSION_STRING \
     docker-ce-cli=$VERSION_STRING \
-    containerd.io=1.6.33-1
+    containerd.io=1.7.23-1
   
   # 下载k8s
   # 查询版本号apt-cache madison kubeadm | awk '{ print $3 }'
