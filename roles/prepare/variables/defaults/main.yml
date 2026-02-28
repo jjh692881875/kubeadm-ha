@@ -213,7 +213,7 @@ kubernetes_yum_repo: https://mirrors.aliyun.com/kubernetes-new/core/stable/v{{ k
 kubernetes_apt_repo: deb [trusted=yes] https://mirrors.aliyun.com/kubernetes-new/core/stable/v{{ kube_version.split('.')[0:2] | join('.') }}/deb/ /
 
 # kubernetes各组件镜像仓库前缀
-kube_image_repository: registry.aliyuncs.com/kubeadm-ha
+kube_image_repository: registry.k8s.io
 
 # kubernetes证书过期时间（天）
 kube_certs_expired: 3650
@@ -417,7 +417,7 @@ lb_kube_apiserver_healthcheck_port: 8081
 
 #---------------------------------------------- Nginx 相关参数 --------------------------------------------#
 # 使用nginx进行apiserver负载时使用的nginx镜像
-lb_nginx_image: "{{ kube_image_repository }}/nginx:1.25-alpine"
+lb_nginx_image: "nginx:1.25-alpine"
 
 #--------------------------------------------- Haproxy 相关参数 --------------------------------------------#
 # 使用haproxy进行apiserver负载时使用的haproxy镜像
