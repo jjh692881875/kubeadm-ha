@@ -29,7 +29,7 @@
     --ignore-daemonsets
     --grace-period {{ drain_grace_period }}
     --timeout {{ drain_timeout }}
-    --delete-local-data {{ inventory_hostname }}
+    --delete-emptydir-data {{ inventory_hostname }}
   ignore_errors: true
   delegate_to: "{{ groups['kube-master'][0] }}"
 
