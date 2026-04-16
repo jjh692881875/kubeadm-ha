@@ -39,9 +39,9 @@ packages=(
     iscsi-initiator-utils
     conntrack-tools
     bash-completion
-    kubeadm-1.33.8
-    kubectl-1.33.8
-    kubelet-1.33.8
+    kubeadm-1.33.10
+    kubectl-1.33.10
+    kubelet-1.33.10
 )
 
 if [ ! -d 'packages' ]; then
